@@ -5,9 +5,10 @@ import AnswerButton from './AnswerButton.vue'
 name: 'ImageCard'
 
 const props = defineProps<{anime: object, hideRank: boolean}>()
+const emit = defineEmits(['answer'])
 
 const onSelect = (value) => {
-    console.log(value)
+    emit('answer', value)
 }
 </script>
 
