@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import IconCommunity from '../icons/IconCommunity.vue'
+import AnswerButton from './AnswerButton.vue'
+
 name: 'ImageCard'
 
 const props = defineProps<{anime: object, hideRank: boolean}>()
+
+const onSelect = (value) => {
+    console.log(value)
+}
 </script>
 
 <template>
@@ -13,6 +19,10 @@ const props = defineProps<{anime: object, hideRank: boolean}>()
                 <div v-if="hideRank" :class="$style.rankText">
                     <p>ranked</p>
                     <h2>{{ props.anime.rank }}</h2>
+                </div>
+                <div v-else :class="$style.selectButton">
+                    <AnswerButton :higher="true" @select="onSelect" />
+                    <AnswerButton :higher="false" @select="onSelect" />
                 </div>
             </div>
             <img :src="props.anime.imageSource" :class="$style.imageBackground" width="500" height="500" />
@@ -26,6 +36,7 @@ const props = defineProps<{anime: object, hideRank: boolean}>()
     text-align: center;
 
     .hoverText {
+        z-index: 100;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -36,6 +47,12 @@ const props = defineProps<{anime: object, hideRank: boolean}>()
             > h2 {
                 color: red;
             }
+        }
+
+        .selectButton {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
     }
 
