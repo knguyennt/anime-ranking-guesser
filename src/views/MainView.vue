@@ -5,9 +5,9 @@ import _ from 'lodash';
 import { onMounted, reactive, watch } from 'vue';
 
 declare interface Anime {
-    imageSource: String;
-    name: String;
-    rank: Number;
+    imageSource: string;
+    name: string;
+    rank: number;
 }
 
 const animes = [

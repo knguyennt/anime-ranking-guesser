@@ -4,10 +4,16 @@ import AnswerButton from './AnswerButton.vue'
 
 name: 'ImageCard'
 
-const props = defineProps<{anime: object, hideRank: boolean}>()
+declare interface Anime {
+    imageSource: string;
+    name: string;
+    rank: number;
+}
+
+const props = defineProps<{anime: Anime, hideRank: boolean}>()
 const emit = defineEmits(['answer'])
 
-const onSelect = (value) => {
+const onSelect = (value : String) => {
     emit('answer', value)
 }
 </script>
@@ -26,7 +32,7 @@ const onSelect = (value) => {
                     <AnswerButton :higher="false" @select="onSelect" />
                 </div>
             </div>
-            <img :src="props.anime.imageSource" :class="$style.imageBackground" width="500" height="500" />
+            <img :src="props.anime.imageSource" :class="$style.imageBackground" width="500" height="700" />
         </el-card>
     </div>
 </template>
