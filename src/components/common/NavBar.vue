@@ -4,6 +4,7 @@
 
 <template>
     <div>
-        <h1>This is a navbar</h1>
+        <h1>This is a nav   bar</h1>
+        <el-button type="primary">Primary</el-button>
     </div>
 </template>
