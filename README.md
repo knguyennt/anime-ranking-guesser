@@ -1,25 +1,14 @@
 # anime-ranking-guesser
 
-This template should help get you started developing with Vue 3 in Vite.
+Anime ranking guesser is a side project with the purpose of practicing using Vue3 framework
 
-## Recommended IDE Setup
+I get the idea from
+- Angela Yu: 100-days-of-code-python (higher-lower game)
+- Higher Lower game: https://www.higherlowergame.com/
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The rule of the game is simple you have 2 anime images, and you have to guess correctly which anime have ranking higher or lower.
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+![Alt text](image.png)
 
 ## Project Setup
 
@@ -44,3 +33,14 @@ npm run build
 ```sh
 npm run lint
 ```
+
+## Note
+This project is just a skeleton to how to use Vue3. I have some planning to improve it such as:
+
+[ ] Adding docker to aid deployment
+
+[ ] A score board to show highscore as well as status and reset button
+
+[ ] Create a crawler to fetch latest anime data (currently hard coded)
+
+[ ] Improve the UI (this is a makeshift design)
