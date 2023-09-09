@@ -12,6 +12,15 @@ const anime = {
 <template>
     <main>
         <NavBar />
-        <ImageCard :anime="anime"/>
+        <div :class="$style.mainSection">
+            <ImageCard :anime="anime" :hideRank="true"/>
+            <ImageCard :anime="anime"/>
+        </div>
     </main>
 </template>
+
+<style module>
+.mainSection {
+    display: flex;
+}
+</style>
