@@ -4,7 +4,6 @@
 
 <template>
     <div>
-        <h1>This is a nav   bar</h1>
-        <el-button type="primary">Primary</el-button>
+        <h1>Anime Ranking Guesser</h1>
     </div>
 </template>
